@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".Extraccion">
+
+
+    <Button
+        android:id="@+id/boton_carga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CargaMediciones"
+        android:text="Cargar Datos"
+        app:layout_constraintBottom_toTopOf="@+id/grupo_fecha"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <RadioGroup
+        android:id="@+id/grupo_fecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/grupo_checks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_año"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="Último año"
+            android:textColor="@color/black"
+            android:textColorHighlight="#68FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radio_mes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="Último mes"
+            android:textColor="@color/black"
+            android:textColorHighlight="#68FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/radio_sem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:buttonTint="@color/black"
+            android:text="Última semana"
+            android:textColor="@color/black"
+            android:textColorHighlight="#68FFFFFF" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/grupo_checks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/grupo_fecha">
+
+        <CheckBox
+            android:id="@+id/checkHumedad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Humedad"
+            android:textColor="@color/black"
+            android:textColorHighlight="#68FFFFFF"
+            android:buttonTint="@color/black"/>
+
+        <CheckBox
+            android:id="@+id/checkTemperatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Temperatura"
+            android:textColor="@color/black"
+            android:textColorHighlight="#68FFFFFF"
+            android:buttonTint="@color/black"/>
+
+        <CheckBox
+            android:id="@+id/checkTierra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="Tierra"
+            android:textColor="@color/black"
+            android:textColorHighlight="#68FFFFFF"
+            android:buttonTint="@color/black"/>
+
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/grafica"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
