@@ -1,5 +1,6 @@
 package com.example.gardenmate;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -12,11 +13,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.LimitLine;
@@ -39,6 +42,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Extraccion extends AppCompatActivity {
@@ -56,6 +61,9 @@ public class Extraccion extends AppCompatActivity {
 
     Response.Listener<String> listener_respuesta;
 
+    Bundle intentExtras;
+    Intent intent;
+
 
 
     @Override
@@ -65,6 +73,11 @@ public class Extraccion extends AppCompatActivity {
         setContentView(R.layout.activity_extraccion);
         lineChart = findViewById(R.id.grafica);
         mediciones= new ArrayList<>();
+
+        intentExtras = new Bundle();
+        //intent= getIntent();
+
+        intentExtras = getIntent().getExtras();
 
         radio_sem= findViewById(R.id.radio_sem);
         radio_mes= findViewById(R.id.radio_mes);
@@ -83,6 +96,7 @@ public class Extraccion extends AppCompatActivity {
                     //Conversion del string en un array JSON
 
                     JSONArray array = new JSONArray(response);
+
 
 
                     //Se recorren todos los objetos
@@ -107,18 +121,22 @@ public class Extraccion extends AppCompatActivity {
             }
         };
 
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://www.gardenmate.xyz/extraer.php",listener_respuesta,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_MEDICIONES,listener_respuesta,
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
                     }
-                });
+                }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<String, String>();
+                params.put("terminal",intentExtras.getString("maceta"));
+                return params;
 
+            }
+        };
 
-
-
-        //Parsear json
         Volley.newRequestQueue(this).add(stringRequest);
     }
 
@@ -166,26 +184,24 @@ public class Extraccion extends AppCompatActivity {
 
     public void CrearGrafica(){
 
-
-
         ArrayList<Medicion> lista_limite_tiempo= FechaDespues(mediciones,LimiteTiempo());
 
-        LineDataSet set_humedad = new LineDataSet(Humedad(lista_limite_tiempo), "humedad");
-        LineDataSet set_temperatura = new LineDataSet(Temperatura(lista_limite_tiempo), "temperatura");
-        LineDataSet set_tierra = new LineDataSet(Tierra(lista_limite_tiempo), "tierra");
+        LineDataSet set_humedad = new LineDataSet(Humedad(lista_limite_tiempo), "humedad %");
+        LineDataSet set_temperatura = new LineDataSet(Temperatura(lista_limite_tiempo), "temperatura ºC");
+        LineDataSet set_tierra = new LineDataSet(Tierra(lista_limite_tiempo), "tierra %");
 
 
-        set_humedad.setColor(R.color.design_default_color_secondary);
-        set_humedad.setCircleColor(R.color.design_default_color_secondary);
-        set_humedad.setLineWidth(2f);
+        set_humedad.setColor(Color.parseColor("#2fb5d6"));
+        set_humedad.setCircleColor(Color.parseColor("#2fb5d6"));
+        set_humedad.setLineWidth(0.9f);
 
-        set_temperatura.setColor(Color.parseColor("#DE3524"));
-        set_temperatura.setCircleColor(Color.parseColor("#DE3524"));
-        set_humedad.setLineWidth(2f);
+        set_temperatura.setColor(Color.parseColor("#DE3520"));
+        set_temperatura.setCircleColor(Color.parseColor("#DE3520"));
+        set_humedad.setLineWidth(0.9f);
 
         set_tierra.setColor(Color.parseColor("#76421A"));
         set_tierra.setCircleColor(Color.parseColor("#76421A"));
-        set_tierra.setLineWidth(4f);
+        set_tierra.setLineWidth(0.9f);
 
 
         /*set_humedad.setMode(LineDataSet.Mode.CUBIC_BEZIER);
@@ -229,7 +245,6 @@ public class Extraccion extends AppCompatActivity {
         lineChart.setData(datos_grafica);
         lineChart.invalidate();
         lineChart.getXAxis().setDrawLabels(false);
-
 
     }
 

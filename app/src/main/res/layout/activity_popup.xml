@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="@color/ic_launcher_background"
+
+    >
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:paddingTop="20dp"
+        android:text="Nombre de la nueva planta"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/nombrePlanta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nombrePlanta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/purple_700"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@id/terminal"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        />
+
+    <ImageView
+        android:id="@+id/abrirCamara"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@color/cardview_shadow_start_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terminal"
+        app:layout_constraintVertical_bias="0.366" />
+
+    <Button
+        android:id="@+id/botonCreaMaceta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Crear Maceta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/abrirCamara"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/terminal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="Código del terminal:"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/abrirCamara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombrePlanta"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <EditText
+        android:id="@+id/edit_terminal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingRight="80dp"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@id/abrirCamara"
+        android:paddingLeft="20dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/purple_700"
+        android:textCursorDrawable="@color/purple_500"
+        app:layout_constraintStart_toEndOf="@+id/terminal"
+        app:layout_constraintTop_toBottomOf="@+id/nombrePlanta"
+        app:layout_constraintWidth_percent="0.3"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

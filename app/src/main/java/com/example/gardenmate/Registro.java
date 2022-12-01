@@ -34,10 +34,8 @@ public class Registro extends AppCompatActivity {
         btn_insert = findViewById(R.id.btn_register);
         getSupportActionBar().hide();
 
-
-
-
         btn_insert.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
 
@@ -62,7 +60,7 @@ public class Registro extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
 
-                        if (response.equalsIgnoreCase("Datos insertados")) {
+                        if (response.equalsIgnoreCase("registro completado")) {
 
                             Toast.makeText(Registro.this, "Datos insertados", Toast.LENGTH_SHORT).show();
 
@@ -73,7 +71,7 @@ public class Registro extends AppCompatActivity {
                         } else {
                             Toast.makeText(Registro.this, response, Toast.LENGTH_SHORT).show();
                             progressDialog.dismiss();
-                            Toast.makeText(Registro.this, "No se puede insrtar", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Registro.this, "error en el registro", Toast.LENGTH_SHORT).show();
                         }
 
                     }
@@ -93,24 +91,14 @@ public class Registro extends AppCompatActivity {
                     params.put("email",email);
                     params.put("password",password);
 
-
-
-
                     return params;
                 }
             };
 
-
             RequestQueue requestQueue = Volley.newRequestQueue(Registro.this);
             requestQueue.add(request);
 
-
-
     }
-
-
-
-
 
 
     @Override
@@ -120,14 +108,9 @@ public class Registro extends AppCompatActivity {
     }
 
 
-
-
-
-
     public  void  login(View v){
         startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
     }
-
 
 }

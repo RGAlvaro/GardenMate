@@ -10,48 +10,26 @@
     tools:context=".Home">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recicler"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:onClick="VerMaceta">
-
-            <ImageView
-                android:id="@+id/imagen_maceta"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:paddingLeft="14dp"
-                android:paddingRight="14dp"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:id="@+id/tipo_maceta"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:gravity="center_vertical"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-        </LinearLayout>
+            android:layout_height="300dp"
+            android:layout_marginTop="200dp"
+            app:layout_constraintBottom_toTopOf="@id/bt_aniadePlanta"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
 
         <Button
-            android:id="@+id/bt_aniadeTerminal"
+            android:id="@+id/bt_aniadePlanta"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Añadir nueva planta" />
+            android:layout_height="50dp"
+            android:text="Añadir nueva planta"
+            app:layout_constraintTop_toBottomOf="@id/recicler"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
 
-    </LinearLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

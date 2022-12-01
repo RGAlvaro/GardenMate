@@ -12,13 +12,16 @@
 
     <Button
         android:id="@+id/boton_carga"
-        android:layout_width="match_parent"
+        android:layout_width="0in"
         android:layout_height="wrap_content"
         android:onClick="CargaMediciones"
         android:text="Cargar Datos"
         app:layout_constraintBottom_toTopOf="@+id/grupo_fecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintWidth_percent="0.9"
+         />
 
 
     <RadioGroup
@@ -116,6 +119,6 @@
         android:layout_marginTop="140dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/grupo_checks" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

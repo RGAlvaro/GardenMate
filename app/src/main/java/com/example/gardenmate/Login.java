@@ -4,7 +4,9 @@ package com.example.gardenmate;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -27,11 +29,16 @@ public class Login extends AppCompatActivity {
 
     String str_email,str_password;
     String url = "http://gardenmate.xyz/login.php";
+    Intent intent;
+    Bundle extras;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        extras =  new Bundle();
+        intent = new Intent(getApplicationContext(), Home.class);
 
         email = findViewById(R.id.etemail);
         password = findViewById(R.id.etcontraseña);
@@ -65,10 +72,13 @@ public class Login extends AppCompatActivity {
                     progressDialog.dismiss();
 
                     if(response.equalsIgnoreCase("Identificación correcta.")){
+                        extras.putString("usuario", email.getText().toString());
+                        intent.putExtras(extras);
 
                         email.setText("");
                         password.setText("");
-                        startActivity(new Intent(getApplicationContext(), Home.class));
+
+                        startActivity(intent);
                         Toast.makeText(Login.this, response, Toast.LENGTH_SHORT).show();
                     }
                     else{
@@ -105,7 +115,8 @@ public class Login extends AppCompatActivity {
         }
     }
 
+
     public void moveToRegistration(View view) {
-        startActivity(new Intent(getApplicationContext(), Registro.class));
+        startActivity(intent);
     }
 }
