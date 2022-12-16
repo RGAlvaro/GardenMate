@@ -12,8 +12,14 @@ independent of each other.
 
 The main component of the device is the nodeMCU v3 with a ESP8266 microchip for the WiFi connection.
 
-  img src= "https://user-images.githubusercontent.com/104777178/207998554-18305bbb-8835-46b4-b9ea-303be09b1ffb.JPG"/>
+  <img src= "https://user-images.githubusercontent.com/104777178/207998554-18305bbb-8835-46b4-b9ea-303be09b1ffb.JPG" width="400" height="266"/>
 
 
-For measuring ambient temperature and humidity the main board uses the DHT22
-![dht22-modulo](https://user-images.githubusercontent.com/104777178/207998750-85e7f0fb-6437-4b71-bdee-c3f81b015b29.jpg)
+For measuring ambient temperature and humidity the main board uses the DHT22.
+
+  <img src= "https://user-images.githubusercontent.com/104777178/207998750-85e7f0fb-6437-4b71-bdee-c3f81b015b29.jpg" width="400" height="266"/>
+  
+Next we have the capacitive soil moisture sensor v2.0
+
+  <img src= "https://user-images.githubusercontent.com/104777178/208001027-72459345-d642-427f-8ac9-5c4ef9058ec6.jpg" widtch="400" height="266"/>
+
