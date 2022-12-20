@@ -39,8 +39,8 @@ The last two components are the power supply MB102 and a 9V battery.
 
 ### Designing the 3D printed case
 <p float="left">
-  <img src= "https://user-images.githubusercontent.com/104777178/208721249-14a988fd-644b-4418-8a61-5a4c0e813bc2.png" width="420" height="266"/>
-  <img src= "https://user-images.githubusercontent.com/104777178/208721400-6e50a7ea-4bfa-4be2-8823-0dc2e1821c02.jpg" width="420" height="266"/>
+  <img src= "https://user-images.githubusercontent.com/104777178/208721249-14a988fd-644b-4418-8a61-5a4c0e813bc2.png" width="400" height="266"/>
+  <img src= "https://user-images.githubusercontent.com/104777178/208721400-6e50a7ea-4bfa-4be2-8823-0dc2e1821c02.jpg" width="400" height="266"/>
 </p>
 
 
