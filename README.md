@@ -19,7 +19,28 @@ For measuring ambient temperature and humidity the main board uses the DHT22.
 
   <img src= "https://user-images.githubusercontent.com/104777178/207998750-85e7f0fb-6437-4b71-bdee-c3f81b015b29.jpg" width="400" height="266"/>
   
-Next we have the capacitive soil moisture sensor v2.0
+Next we have the capacitive soil moisture sensor v2.0.
 
-  <img src= "https://user-images.githubusercontent.com/104777178/208001027-72459345-d642-427f-8ac9-5c4ef9058ec6.jpg" widtch="400" height="266"/>
+  <img src= "https://user-images.githubusercontent.com/104777178/208001027-72459345-d642-427f-8ac9-5c4ef9058ec6.jpg" width="400" height="266"/>
+  
+The last two components are the power supply MB102 and a 9V battery.
+<p float="left">
+  <img src= "https://user-images.githubusercontent.com/104777178/208714764-59333f8c-eef6-4fd3-aeb2-b2c1a38f31ac.jpg" width="266" height="266"/>
+
+  <img src= "https://user-images.githubusercontent.com/104777178/208714776-e844bb18-03d6-424c-ae03-2a6dcc2ca395.jpg" width="266" height="266"/>
+</p>
+
+### Assembly
+
+<p float="left">
+  <img src= "https://user-images.githubusercontent.com/104777178/208717640-a30d68a9-dcab-4151-80fc-2774b6e6dcb6.jpg" width="400" height="266"/>
+  <img src= "https://user-images.githubusercontent.com/104777178/208718389-c43a5b04-babb-46b4-9d91-9393185f5c24.jpg" width="200" height="266"/>
+</p>
+
+### Designing the 3D printed case
+<p float="left">
+  <img src= "https://user-images.githubusercontent.com/104777178/208721249-14a988fd-644b-4418-8a61-5a4c0e813bc2.png" width="420" height="266"/>
+  <img src= "https://user-images.githubusercontent.com/104777178/208721400-6e50a7ea-4bfa-4be2-8823-0dc2e1821c02.jpg" width="420" height="266"/>
+</p>
+
 
