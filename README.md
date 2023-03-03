@@ -44,7 +44,7 @@ The last two components are the power supply MB102 and a 9V battery.
   <img src= "https://user-images.githubusercontent.com/104777178/208721400-6e50a7ea-4bfa-4be2-8823-0dc2e1821c02.jpg" width="400" height="266"/>
 </p>
 
-#Software
+# Software
 
 The Android app is the main interface for the user to interact with the product. In this app the user can create an account linked to the dispositive ID, register an unlimited number of dispositives and pots and check the readings of the last day/month/year.
 
