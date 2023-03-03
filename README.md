@@ -35,12 +35,17 @@ The last two components are the power supply MB102 and a 9V battery.
 <p float="left">
   <img src= "https://user-images.githubusercontent.com/104777178/208717640-a30d68a9-dcab-4151-80fc-2774b6e6dcb6.jpg" width="400" height="266"/>
   <img src= "https://user-images.githubusercontent.com/104777178/208718389-c43a5b04-babb-46b4-9d91-9393185f5c24.jpg" width="200" height="266"/>
-</p>
+  <img src= "https://user-images.githubusercontent.com/104777178/222774524-22aedb1e-9b87-4ee5-83d5-d2148df9f40b.PNG" width="200" height="266"/>
+
 
 ### Designing the 3D printed case
 <p float="left">
   <img src= "https://user-images.githubusercontent.com/104777178/208721249-14a988fd-644b-4418-8a61-5a4c0e813bc2.png" width="400" height="266"/>
   <img src= "https://user-images.githubusercontent.com/104777178/208721400-6e50a7ea-4bfa-4be2-8823-0dc2e1821c02.jpg" width="400" height="266"/>
 </p>
+
+#Software
+
+The Android app is the main interface for the user to interact with the product. In this app the user can create an account linked to the dispositive ID, register an unlimited number of dispositives and pots and check the readings of the last day/month/year.
 
 
