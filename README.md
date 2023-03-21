@@ -6,6 +6,7 @@ to help non-experts in plant care. The objective of the project was to put my le
 Basically the interesting thing of the whole project is the idea of keeping the three main components (the board with the sensors, the android app, and the database)
 independent of each other.
 
+
 ![ESQUEMA REST(recortado)](https://user-images.githubusercontent.com/104777178/207394025-697be728-7096-4b8c-ac35-af793dfc306b.png)
 
 # Hardware
@@ -48,5 +49,11 @@ The last two components are the power supply MB102 and a 9V battery.
 # Software
 
 The Android app is the main interface for the user to interact with the product. In this app the user can create an account linked to the dispositive ID, register an unlimited number of dispositives and pots and check the readings of the last day/month/year.
-
-
+<p align="left">
+  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226712724-d2c94e77-f9e8-4ed0-abb8-1fab45351547.jpg">
+  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226717008-14ace3a8-19bd-47ca-be13-ca70be8842d5.jpg">
+  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226717566-64ba6986-4d5f-4ef3-8ad4-84aa86fe930e.jpg">
+  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226712724-d2c94e77-f9e8-4ed0-abb8-1fab45351547.jpg">
+  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226717008-14ace3a8-19bd-47ca-be13-ca70be8842d5.jpg">
+</p>
+Simple login screen. For trial purposes you can use prueba as user and password.
