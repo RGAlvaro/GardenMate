@@ -50,10 +50,18 @@ The last two components are the power supply MB102 and a 9V battery.
 
 The Android app is the main interface for the user to interact with the product. In this app the user can create an account linked to the dispositive ID, register an unlimited number of dispositives and pots and check the readings of the last day/month/year.
 <p align="left">
-  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226712724-d2c94e77-f9e8-4ed0-abb8-1fab45351547.jpg">
-  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226717008-14ace3a8-19bd-47ca-be13-ca70be8842d5.jpg">
-  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226717566-64ba6986-4d5f-4ef3-8ad4-84aa86fe930e.jpg">
-  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226712724-d2c94e77-f9e8-4ed0-abb8-1fab45351547.jpg">
-  <img width="17%" height="17%" src="https://user-images.githubusercontent.com/104777178/226717008-14ace3a8-19bd-47ca-be13-ca70be8842d5.jpg">
+  <img width="25%" height="17%" src="https://user-images.githubusercontent.com/104777178/226712724-d2c94e77-f9e8-4ed0-abb8-1fab45351547.jpg">
+  <img width="25%" height="17%" src="https://user-images.githubusercontent.com/104777178/226717566-64ba6986-4d5f-4ef3-8ad4-84aa86fe930e.jpg">
+  <img width="25%" height="17%" src="https://user-images.githubusercontent.com/104777178/227992678-4ac01aad-10e0-4b4e-b18b-3ec4337bcce5.jpg">
 </p>
-Simple login screen. For trial purposes you can use prueba as user and password.
+Simple login screen. For trial purposes you can use prueba as user and password. The creation of a new plant is also very straightforward, just name it, enter your device code, and select a picture of your plant.
+<br />
+<br />
+<br />
+<p align="left">
+  <img width="25%" height="17%" src="https://user-images.githubusercontent.com/104777178/227992676-52e5af42-a8d4-49f0-91a5-06a4576d9804.jpg">
+  <img width="25%" height="17%" src="https://user-images.githubusercontent.com/104777178/227993945-ca99c0c0-5a57-4752-b354-9e903f6ee0d9.jpg">
+  <img width="25%" height="17%" src="https://user-images.githubusercontent.com/104777178/227992667-e618d760-b4f6-4c50-8f5f-76be2f7df9f8.jpg">
+</p>
+
+Once you have enough data from your device, you can check all of the measurings in this screen. For now these measures are soil moisture, temperature and humidity. 
